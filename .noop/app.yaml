@@ -1,0 +1,20 @@
+components:
+  - name: quest
+    type: service
+    image: node:18
+    root: /
+    port: 3000
+    build:
+      steps:
+        - directory: /
+        - copy: src/*
+          destination: src/
+        - copy: bin/*
+          destination: bin/
+        - copy: package*.json
+          destination: /
+    runtime:
+      command: npm start
+      variables:
+        SECRET_WORD:
+          $env: SECRET_WORD
