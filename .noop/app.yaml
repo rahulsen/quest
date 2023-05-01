@@ -13,8 +13,9 @@ components:
           destination: bin/
         - copy: package*.json
           destination: /
+        - run: npm install
     runtime:
-      command: npm install && npm start
+      command: npm start
       variables:
         SECRET_WORD:
           $env: SECRET_WORD
