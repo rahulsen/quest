@@ -1,7 +1,7 @@
 components:
   - name: quest
     type: service
-    image: node:18
+    image: node:10
     root: /
     port: 3000
     build:
