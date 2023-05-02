@@ -19,6 +19,6 @@ components:
       variables:
         SECRET_WORD:
           $env: SECRET_WORD
-    routes:
-        - target:
-          component: quest
+routes:
+    - target:
+      component: quest
